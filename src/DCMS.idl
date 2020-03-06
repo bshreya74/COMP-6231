@@ -1,0 +1,21 @@
+module DCMSApp {
+
+	interface DCMS{
+	
+		//create teacher record
+		string createTRecord(in string managerID ,in string firstName, in string lastName, in string address, in string phone, in string specialization, in string location);
+		
+		//create student record
+		string createSRecord(in string managerID ,in string firstName, in string lastName, in string courseRegistered, in string status, in string statusDate);
+		
+		//get record counts
+		string getRecordCounts(in string managerID);
+		
+		//edit record
+		string editRecord(in string managerID, in string recordID, in string fieldName, in string newValue);
+		
+		//transfer record to another server
+		string transferRecord(in string managerID, in string recordID, in string remoteCenterServerName);
+	};
+	
+};
